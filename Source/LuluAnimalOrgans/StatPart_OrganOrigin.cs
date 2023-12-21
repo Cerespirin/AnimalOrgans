@@ -5,7 +5,7 @@ namespace Cerespirin.AnimalOrgans
 {
 	public class StatPart_OrganOrigin : StatPart
 	{
-		private const string StatsReport_OrganOrigin = "LuluAnimalOrgans_StatsReport_OrganOrigin";
+		private const string StatsReport_OrganOrigin = "AnimalOrgans_StatsReport_OrganOrigin";
 
 		public override void TransformValue(StatRequest req, ref float val)
 		{
