@@ -16,7 +16,7 @@
 		<xpath>Defs/ThingDef[@Name = "BodyPartNaturalBase"]/comps</xpath>
 		<value>
 			<li>
-				<compClass>LoonyLadle.AnimalOrgans.CompOrganOrigin</compClass>
+				<compClass>Cerespirin.AnimalOrgans.CompOrganOrigin</compClass>
 			</li>
 		</value>
 	</Operation>
@@ -35,7 +35,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/StatDef[defName = "MarketValue"]/parts</xpath>
 		<value>
-			<li Class="LoonyLadle.AnimalOrgans.StatPart_OrganOrigin"/>
+			<li Class="Cerespirin.AnimalOrgans.StatPart_OrganOrigin"/>
 		</value>
 	</Operation>
 	<!-- Add natural installation recipes to base animal thing. -->

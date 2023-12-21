@@ -1,4 +1,4 @@
-# Lulu's Animal Organs
+# Animal Organs
 Allows harvesting and installing natural organs of animals.
 
 
@@ -9,7 +9,7 @@ It is possible to use animal surgery to train doctors very quickly at little ris
 
 
 ## Compatibility
-Lulu's Animal Organs should be compatible with all animal mods. Surgery mods that add additional harvestable parts will require a simple xpath compatibility patch to add their recipes to `AnimalThingBase`. A patch for [Lulu's Vanilla Surgery Expansion](https://github.com/LoonyLadle/LuluVanillaSurgeryExpansion) is included which can also be used as a template.
+Animal Organs should be compatible with all animal mods. Surgery mods that add additional harvestable parts will require a simple xpath compatibility patch to add their recipes to `AnimalThingBase`.
 
 
 ## Technical Details
