@@ -7,7 +7,7 @@
 		<parentCategory>BodyPartsNatural</parentCategory>
 		<allowedByDefault>true</allowedByDefault>
 		<saveKey>AnimalOrgans_allowOrgansHumanlike</saveKey>
-		<workerClass>LoonyLadle.AnimalOrgans.SpecialThingFilterWorker_OrgansHumanlike</workerClass>
+		<workerClass>Cerespirin.AnimalOrgans.SpecialThingFilterWorker_OrgansHumanlike</workerClass>
 	</SpecialThingFilterDef>
 
 	<SpecialThingFilterDef>
@@ -17,6 +17,6 @@
 		<parentCategory>BodyPartsNatural</parentCategory>
 		<allowedByDefault>true</allowedByDefault>
 		<saveKey>AnimalOrgans_allowOrgansAnimal</saveKey>
-		<workerClass>LoonyLadle.AnimalOrgans.SpecialThingFilterWorker_OrgansAnimal</workerClass>
+		<workerClass>Cerespirin.AnimalOrgans.SpecialThingFilterWorker_OrgansAnimal</workerClass>
 	</SpecialThingFilterDef>
 </Defs>
