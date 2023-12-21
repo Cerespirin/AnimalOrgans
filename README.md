@@ -1,4 +1,4 @@
-# Lulu's Animal Organs
+# Animal Organs
 Allows harvesting and installing natural organs of animals.
 
 
@@ -9,10 +9,10 @@ It is possible to use animal surgery to train doctors very quickly at little ris
 
 
 ## Compatibility
-Lulu's Animal Organs should be compatible with all animal mods. Surgery mods that add additional harvestable parts will require a simple xpath compatibility patch to add their recipes to `AnimalThingBase`. A patch for [Lulu's Vanilla Surgery Expansion](https://github.com/LoonyLadle/LuluVanillaSurgeryExpansion) is included which can also be used as a template.
+Animal Organs should be compatible with all animal mods. Surgery mods that add additional harvestable parts will require a simple xpath compatibility patch to add their recipes to `AnimalThingBase`.
 
 
 ## Technical Details
-This mod adds *absolutely no new defs*; all functionality is achieved by patching the existing defs and code. The most notable patch is the removal of the `RaceProps.Animal` check in `MedicalRecipesUtility.IsCleanAndDroppable` to properly allow the harvest of animal organs. This may have unexpected consequences for mods that rely on this check for other purposes, but in the author's opinion this seems highly unlikely.
+This mod adds *absolutely no new defs;* all functionality is achieved by patching the existing defs and code. The most notable patch is the removal of the `RaceProps.Animal` check in `MedicalRecipesUtility.IsCleanAndDroppable` to properly allow the harvest of animal organs. This may have unexpected consequences for mods that rely on this check for other purposes, but in the author's opinion this seems highly unlikely.
 
 The core recipes have been xpath patched onto `AnimalThingBase`, so this mod should function for all new animals added by other mods that inherit from this common def. It should not affect humanlikes or mechanoids.
