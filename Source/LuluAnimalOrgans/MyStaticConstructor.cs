@@ -11,10 +11,10 @@ namespace Cerespirin.AnimalOrgans
 		static MyStaticConstructor()
 		{
 			// Execute our Harmony patches.
-			Harmony harmony = new Harmony("rimworld.loonyladle.animalorgans");
+			Harmony harmony = new Harmony("rimworld.cerespirin.animalorgans");
 			harmony.PatchAll();
 
-			StringBuilder stringBuilder = new StringBuilder("[LuluAnimalOrgans] Dynamic patched the following defs: ");
+			StringBuilder stringBuilder = new StringBuilder("[AnimalOrgans] Dynamic patched the following defs: ");
 			bool first = true;
 
 			// Search all ThingDefs in the DefDatabase.
