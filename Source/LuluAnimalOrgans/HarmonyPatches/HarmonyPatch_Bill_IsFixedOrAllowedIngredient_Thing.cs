@@ -2,8 +2,6 @@
 using RimWorld;
 using Verse;
 
-#pragma warning disable IDE1006 // Naming Styles
-
 namespace Cerespirin.AnimalOrgans
 {
 	[HarmonyPatch(typeof(Bill), nameof(Bill.IsFixedOrAllowedIngredient), typeof(Thing))]

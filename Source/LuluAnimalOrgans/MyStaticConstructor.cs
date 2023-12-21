@@ -3,8 +3,6 @@ using RimWorld;
 using System.Text;
 using Verse;
 
-#pragma warning disable IDE1006 // Naming Styles
-
 namespace Cerespirin.AnimalOrgans
 {
 	[StaticConstructorOnStartup]
