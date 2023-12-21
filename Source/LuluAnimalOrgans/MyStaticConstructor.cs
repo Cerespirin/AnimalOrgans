@@ -5,7 +5,7 @@ using Verse;
 
 #pragma warning disable IDE1006 // Naming Styles
 
-namespace LoonyLadle.AnimalOrgans
+namespace Cerespirin.AnimalOrgans
 {
 	[StaticConstructorOnStartup]
 	public static class MyStaticConstructor

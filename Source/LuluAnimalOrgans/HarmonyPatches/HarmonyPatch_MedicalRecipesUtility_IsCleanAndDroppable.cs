@@ -7,7 +7,7 @@ using Verse;
 
 #pragma warning disable IDE1006 // Naming Styles
 
-namespace LoonyLadle.AnimalOrgans
+namespace Cerespirin.AnimalOrgans
 {
 	[HarmonyPatch(typeof(MedicalRecipesUtility), nameof(MedicalRecipesUtility.IsCleanAndDroppable))]
 	public static class HarmonyPatch_MedicalRecipesUtility_IsCleanAndDroppable

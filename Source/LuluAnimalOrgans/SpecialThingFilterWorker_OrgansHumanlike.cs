@@ -2,7 +2,7 @@
 
 #pragma warning disable IDE1006 // Naming Styles
 
-namespace LoonyLadle.AnimalOrgans
+namespace Cerespirin.AnimalOrgans
 {
 	public class SpecialThingFilterWorker_OrgansHumanlike : SpecialThingFilterWorker
 	{

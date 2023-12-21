@@ -4,7 +4,7 @@ using Verse;
 
 #pragma warning disable IDE1006 // Naming Styles
 
-namespace LoonyLadle.AnimalOrgans
+namespace Cerespirin.AnimalOrgans
 {
 	[HarmonyPatch(typeof(Bill), nameof(Bill.IsFixedOrAllowedIngredient), typeof(Thing))]
 	public static class HarmonyPatch_Bill_IsFixedOrAllowedIngredient_Thing
