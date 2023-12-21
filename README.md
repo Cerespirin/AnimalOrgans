@@ -1,4 +1,4 @@
-# nimal Organs
+# Animal Organs
 Allows harvesting and installing natural organs of animals.
 
 
