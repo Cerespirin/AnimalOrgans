@@ -1,12 +1,12 @@
 ﻿using RimWorld;
 using Verse;
 
-#pragma warning disable IDE1006 // Naming Styles
-
-namespace LoonyLadle.AnimalOrgans
+namespace Cerespirin.AnimalOrgans
 {
 	public class StatPart_OrganOrigin : StatPart
 	{
+		private const string StatsReport_OrganOrigin = "AnimalOrgans_StatsReport_OrganOrigin";
+
 		public override void TransformValue(StatRequest req, ref float val)
 		{
 			// Only apply our factor if it makes sense to do so.
@@ -22,7 +22,7 @@ namespace LoonyLadle.AnimalOrgans
 			if (MyTryGetFactor(req, out float factor))
 			{
 				// "Multiplier for {0} organ"
-				return "LuluAnimalOrgans_StatsReport_OrganOrigin".Translate(req.Thing.TryGetComp<CompOrganOrigin>().originDef.label) + ": x" + factor.ToStringPercent();
+				return StatsReport_OrganOrigin.Translate(req.Thing.TryGetComp<CompOrganOrigin>().originDef.label) + ": x" + factor.ToStringPercent();
 			}
 			return null;
 		}
@@ -38,7 +38,7 @@ namespace LoonyLadle.AnimalOrgans
 				factor = organOrgin.originDef.BaseMarketValue / ThingDefOf.Human.BaseMarketValue;
 				return true;
 			}
-			
+
 			// Default case if no thing or comp.
 			factor = 1f;
 			return false;
