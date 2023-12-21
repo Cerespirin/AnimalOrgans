@@ -36,7 +36,7 @@ namespace Cerespirin.AnimalOrgans
 				factor = organOrgin.originDef.BaseMarketValue / ThingDefOf.Human.BaseMarketValue;
 				return true;
 			}
-			
+
 			// Default case if no thing or comp.
 			factor = 1f;
 			return false;

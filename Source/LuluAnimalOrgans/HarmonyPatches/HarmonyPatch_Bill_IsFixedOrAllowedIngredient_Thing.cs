@@ -18,7 +18,7 @@ namespace Cerespirin.AnimalOrgans
 
 			// Does our organ origin exist?
 			if (organOrgin != null)
-			{   
+			{
 				// Is our bill giver (patient) a pawn and the recipe a natural part installation?
 				if ((__instance.billStack.billGiver is Pawn patient) && (__instance.recipe.Worker is Recipe_InstallNaturalBodyPart))
 				{
