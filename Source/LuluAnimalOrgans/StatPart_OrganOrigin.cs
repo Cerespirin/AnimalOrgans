@@ -5,6 +5,8 @@ namespace Cerespirin.AnimalOrgans
 {
 	public class StatPart_OrganOrigin : StatPart
 	{
+		private const string StatsReport_OrganOrigin = "LuluAnimalOrgans_StatsReport_OrganOrigin";
+
 		public override void TransformValue(StatRequest req, ref float val)
 		{
 			// Only apply our factor if it makes sense to do so.
@@ -20,7 +22,7 @@ namespace Cerespirin.AnimalOrgans
 			if (MyTryGetFactor(req, out float factor))
 			{
 				// "Multiplier for {0} organ"
-				return "LuluAnimalOrgans_StatsReport_OrganOrigin".Translate(req.Thing.TryGetComp<CompOrganOrigin>().originDef.label) + ": x" + factor.ToStringPercent();
+				return StatsReport_OrganOrigin.Translate(req.Thing.TryGetComp<CompOrganOrigin>().originDef.label) + ": x" + factor.ToStringPercent();
 			}
 			return null;
 		}
