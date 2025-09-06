@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System.Linq;
 using Verse;
 
@@ -14,7 +15,7 @@ namespace Cerespirin.AnimalOrgans
 			Scribe_Defs.Look(ref originDef, nameof(originDef));
 		}
 
-		public override void PostPostGeneratedForTrader(TraderKindDef trader, int forTile, Faction forFaction)
+		public override void PostPostGeneratedForTrader(TraderKindDef trader, PlanetTile forTile, Faction forFaction)
 		{
 			// 20% chance generated organ will be for an animal when generated for a trader.
 			if (Rand.Chance(0.2f))
