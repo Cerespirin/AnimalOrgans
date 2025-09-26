@@ -9,7 +9,7 @@ namespace Cerespirin.AnimalOrgans
 	{
 		public static bool Postfix(bool __result, Bill __instance, Thing thing)
 		{
-			if (!__result) return false;
+			if (!__result) { return false; }
 
 			if (thing.TryGetComp(out CompOrganOrigin organOrgin) && (__instance.billStack.billGiver is Pawn patient) && (__instance.recipe.Worker is Recipe_InstallNaturalBodyPart))
 			{
