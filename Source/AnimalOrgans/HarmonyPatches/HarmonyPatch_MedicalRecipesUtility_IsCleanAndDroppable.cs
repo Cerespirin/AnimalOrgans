@@ -15,6 +15,7 @@ namespace Cerespirin.AnimalOrgans
 		{
 			List<CodeInstruction> blockInstructions = new List<CodeInstruction>();
 			bool discard = false;
+			bool didTheThing = false;
 
 			MethodInfo targetMethod = typeof(RaceProperties).GetProperty(nameof(RaceProperties.Animal)).GetGetMethod();
 
@@ -37,9 +38,17 @@ namespace Cerespirin.AnimalOrgans
 						}
 						yield return blockInstruction;
 					}
+					if (discard)
+					{
+						didTheThing = true;
+						discard = false;
+					}
 					blockInstructions.Clear();
-					discard = false;
 				}
+			}
+			if (!didTheThing)
+			{
+				Log.Error("[AnimalOrgans] HarmonyPatch_MedicalRecipesUtility_IsCleanAndDroppable: unable to find injection point. This was likely due to a mod incompatibility; please report this to the mod author.");
 			}
 			yield break;
 		}
