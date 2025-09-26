@@ -31,7 +31,6 @@ namespace Cerespirin.AnimalOrgans
 
 		public override string TransformLabel(string label)
 		{
-			// Will change "lung" to "human lung", for example.
 			return originDef.label + " " + label;
 		}
 
