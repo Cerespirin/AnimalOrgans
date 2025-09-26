@@ -9,9 +9,7 @@ namespace Cerespirin.AnimalOrgans
 	{
 		public static void Postfix(Thing __result, Pawn pawn)
 		{
-			CompOrganOrigin organOrigin = __result.TryGetComp<CompOrganOrigin>();
-
-			if (organOrigin != null)
+			if (__result.TryGetComp(out CompOrganOrigin organOrigin))
 			{
 				organOrigin.originDef = pawn.def;
 			}

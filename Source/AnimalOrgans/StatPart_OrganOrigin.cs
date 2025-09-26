@@ -28,9 +28,7 @@ namespace Cerespirin.AnimalOrgans
 
 		private bool MyTryGetFactor(StatRequest req, out float factor)
 		{
-			CompOrganOrigin organOrgin = req.Thing?.TryGetComp<CompOrganOrigin>();
-
-			if (organOrgin != null)
+			if (req.Thing?.TryGetComp(out CompOrganOrigin organOrgin) ?? false)
 			{
 				// Normalize against human market value (most animals are worth less than humans).
 				factor = organOrgin.originDef.BaseMarketValue / ThingDefOf.Human.BaseMarketValue;

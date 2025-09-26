@@ -11,14 +11,9 @@ namespace Cerespirin.AnimalOrgans
 		{
 			if (!__result) return false;
 
-			CompOrganOrigin organOrgin = thing.TryGetComp<CompOrganOrigin>();
-
-			if (organOrgin != null)
+			if (thing.TryGetComp(out CompOrganOrigin organOrgin) && (__instance.billStack.billGiver is Pawn patient) && (__instance.recipe.Worker is Recipe_InstallNaturalBodyPart))
 			{
-				if ((__instance.billStack.billGiver is Pawn patient) && (__instance.recipe.Worker is Recipe_InstallNaturalBodyPart))
-				{
-					return organOrgin.originDef == patient.def;
-				}
+				return organOrgin.originDef == patient.def;
 			}
 			return __result;
 		}

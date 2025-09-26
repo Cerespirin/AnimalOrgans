@@ -36,8 +36,7 @@ namespace Cerespirin.AnimalOrgans
 
 		public override bool AllowStackWith(Thing other)
 		{
-			CompOrganOrigin otherComp = other.TryGetComp<CompOrganOrigin>();
-			return (otherComp != null) && (otherComp.originDef == originDef);
+			return other.TryGetComp(out CompOrganOrigin otherComp) && (otherComp.originDef == originDef);
 		}
 
 		public override void PostSplitOff(Thing piece)
