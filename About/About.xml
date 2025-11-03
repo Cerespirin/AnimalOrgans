@@ -3,6 +3,7 @@
 	<name>Animal Organs</name>
 	<author>Cerespirin</author>
 	<packageId>Cerespirin.RimWorld.AnimalOrgans</packageId>
+	<modVersion>1.6.0.5</modVersion>
 	<description>Allows harvesting and installing natural organs of animals.</description>
 	<url>https://github.com/Cerespirin/AnimalOrgans</url>
 	<supportedVersions>

@@ -31,14 +31,12 @@ namespace Cerespirin.AnimalOrgans
 
 		public override string TransformLabel(string label)
 		{
-			// Will change "lung" to "human lung", for example.
 			return originDef.label + " " + label;
 		}
 
 		public override bool AllowStackWith(Thing other)
 		{
-			CompOrganOrigin otherComp = other.TryGetComp<CompOrganOrigin>();
-			return (otherComp != null) && (otherComp.originDef == originDef);
+			return other.TryGetComp(out CompOrganOrigin otherComp) && (otherComp.originDef == originDef);
 		}
 
 		public override void PostSplitOff(Thing piece)

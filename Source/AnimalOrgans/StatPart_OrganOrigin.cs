@@ -18,7 +18,6 @@ namespace Cerespirin.AnimalOrgans
 
 		public override string ExplanationPart(StatRequest req)
 		{
-			// Only explain our factor if it makes sense to do so.
 			if (MyTryGetFactor(req, out float factor))
 			{
 				// "Multiplier for {0} organ"
@@ -29,17 +28,12 @@ namespace Cerespirin.AnimalOrgans
 
 		private bool MyTryGetFactor(StatRequest req, out float factor)
 		{
-			// Get our organ origin comp, if possible.
-			CompOrganOrigin organOrgin = req.Thing?.TryGetComp<CompOrganOrigin>();
-
-			if (organOrgin != null)
+			if (req.Thing?.TryGetComp(out CompOrganOrigin organOrgin) ?? false)
 			{
 				// Normalize against human market value (most animals are worth less than humans).
 				factor = organOrgin.originDef.BaseMarketValue / ThingDefOf.Human.BaseMarketValue;
 				return true;
 			}
-
-			// Default case if no thing or comp.
 			factor = 1f;
 			return false;
 		}
